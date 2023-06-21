@@ -17,8 +17,9 @@ int handle_cmd(char *line, unsigned int l, stack_t **head)
 
     first = strtok(line, " \n\t\r\a\v");
     
-    if (first == NULL)
+    if (first == NULL || first[0] == '#')
         return (0);
+
     while (op[i].opcode != NULL)
     {
         if (strcmp(op[i].opcode, first) == 0)
@@ -29,17 +30,26 @@ int handle_cmd(char *line, unsigned int l, stack_t **head)
                 if (_isdigit(first) == 1)
                     value = atoi(first);
                 else
-                    return (1);
+                {
+                    fprintf(stderr, "L%u: usage: push integer\n", l);
+                    fclose(gv.file);
+                    free(gv.line);
+                    free_stack(head);
+                    exit(EXIT_FAILURE);
+                }
             }
             op[i].f(head, l);
-            break;
+            return (0);
         }
         else
         {
             if (op[i+1].opcode == NULL)
             {
-                dprintf(STDERR_FILENO, "L%u: unknown instruction %s\n", l, first);
-                return (2);
+                fprintf(stderr, "L%u: unknown instruction %s\n", l, first);
+                fclose(gv.file);
+                free(gv.line);
+                free_stack(head);
+                exit(EXIT_FAILURE);
             }
         }
         i++;

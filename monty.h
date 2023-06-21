@@ -56,6 +56,8 @@ typedef struct glob_s
 extern int value;
 extern glob_vars gv;
 
+ssize_t getline(char **lineptr, size_t *n, FILE *stream);
+
 int handle_cmd(char *, unsigned int, stack_t**);
 int _isdigit(char *c);
 
@@ -66,7 +68,7 @@ void _pop(stack_t **stack, unsigned int line_number);
 void _swap(stack_t **stack, unsigned int line_number);
 void _add(stack_t **stack, unsigned int line_number);
 void _nop(stack_t **stack, unsigned int line_number);
-void free_dlistint(stack_t *stack);
+
 void free_stack(stack_t **stack);
 void free_all();
 

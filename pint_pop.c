@@ -4,12 +4,12 @@ void _pint(stack_t **stack, unsigned int line_number)
 {
 	if (!*stack || !stack)
 	{
-		dprintf(STDERR_FILENO, "L%d: can't pint, stack empty\n", line_number);
+		fprintf(stderr, "L%d: can't pint, stack empty\n", line_number);
         free_all();
         exit(EXIT_FAILURE);
 	}
 	else
-		dprintf(STDOUT_FILENO, "%d\n", (*stack)->n);
+		fprintf(stdout, "%d\n", (*stack)->n);
 }
 
 void _pop(stack_t **stack, unsigned int line_number)
@@ -18,7 +18,7 @@ void _pop(stack_t **stack, unsigned int line_number)
 
 	if (!*stack || !stack)
 	{
-		dprintf(STDERR_FILENO, "L%d: can't pop an empty stack\n", line_number);
+		fprintf(stderr, "L%d: can't pop an empty stack\n", line_number);
 		free_all();
 		exit(EXIT_FAILURE);
 	}

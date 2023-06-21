@@ -73,6 +73,8 @@ void _sub(stack_t **head, unsigned int counter);
 void _div(stack_t **head, unsigned int counter);
 void _mul(stack_t **head, unsigned int counter);
 void _mod(stack_t **head, unsigned int counter);
+void _pchar(stack_t **head, unsigned int counter);
+void _pstr(stack_t **head, unsigned int counter);
 
 void free_stack(stack_t **stack);
 void free_all();

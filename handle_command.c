@@ -16,6 +16,8 @@ int handle_cmd(char *line, unsigned int l, stack_t **head)
         {"div", _div},
         {"mul", _mul},
         {"mod", _mod},
+        {"pchar", _pchar},
+        {"pstr", _pstr},
 		{NULL, NULL}
 	};
 

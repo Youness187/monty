@@ -1,7 +1,11 @@
 #include "monty.h"
 
 int value;
-
+/**
+ * new_node - create new node
+ * @n: value
+ * Return: new node
+ */
 stack_t *new_node(int n)
 {
 	stack_t *new = NULL;
@@ -61,7 +65,6 @@ void _push(stack_t **stack, unsigned int line_number)
  * _pall - print elements stack
  * @stack: is a parameter
  * @n: is value
- * Return: nothing
  */
 void _pall(stack_t **stack, unsigned int n)
 {

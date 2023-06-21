@@ -1,9 +1,13 @@
 #include "monty.h"
-
+/**
+ * _rotl - rotl
+ * @head: stack head
+ * @counter: lines number
+*/
 void _rotl(stack_t **head, unsigned int counter)
 {
 	stack_t *tmp = *head, *aux;
-    (void)counter;
+	(void)counter;
 
 	if (*head == NULL || (*head)->next == NULL)
 	{
@@ -21,11 +25,15 @@ void _rotl(stack_t **head, unsigned int counter)
 	(*head) = aux;
 }
 
-
+/**
+ * _rotr - rotr
+ * @head: stack head
+ * @counter: lines number
+*/
 void _rotr(stack_t **head, unsigned int counter)
 {
 	stack_t *copy = *head;
-    (void)counter;
+	(void)counter;
 
 	if (*head == NULL || (*head)->next == NULL)
 	{

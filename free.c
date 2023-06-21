@@ -1,11 +1,16 @@
 #include "monty.h"
-
-void free_all()
+/**
+ * free_all - free *FILE and line
+*/
+void free_all(void)
 {
 	fclose(gv.file);
 	free(gv.line);
 }
-
+/**
+ * free_stack - free stack_t
+ * @stack: stack head
+*/
 void free_stack(stack_t **stack)
 {
 	stack_t *current = *stack;

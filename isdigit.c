@@ -1,5 +1,9 @@
 #include "monty.h"
-
+/**
+ * _isdigit - checking if string is an int
+ * @c: string
+ * Return: 0 if not and 1 if is
+*/
 int _isdigit(char *c)
 {
 	char *aux = c;

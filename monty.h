@@ -83,6 +83,6 @@ void _queue(stack_t **head, unsigned int counter);
 void _stack(stack_t **head, unsigned int counter);
 
 void free_stack(stack_t **stack);
-void free_all();
+void free_all(void);
 
 #endif

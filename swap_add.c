@@ -1,5 +1,9 @@
 #include "monty.h"
-
+/**
+ * _swap - swaps
+ * @stack: stack head
+ * @line_number: lines number
+*/
 void _swap(stack_t **stack, unsigned int line_number)
 {
 	stack_t *current = *stack;
@@ -16,7 +20,11 @@ void _swap(stack_t **stack, unsigned int line_number)
 	current->n = current->next->n;
 	current->next->n = temp;
 }
-
+/**
+ * _add - adds
+ * @stack: stack head
+ * @line_number: lines number
+*/
 void _add(stack_t **stack, unsigned int line_number)
 {
 	stack_t *current = NULL;
@@ -34,7 +42,11 @@ void _add(stack_t **stack, unsigned int line_number)
 	current->next->n = sum;
 	_pop(stack, line_number);
 }
-
+/**
+ * _nop - don't do anything.
+ * @stack: stack head
+ * @line_number: lines number
+*/
 void _nop(stack_t **stack, unsigned int line_number)
 {
 	(void)stack;

@@ -41,7 +41,8 @@ typedef struct instruction_s
 
 /**
  * struct glob_s - global and its funcs
- * @fd: File descriptor
+ * @file: File descriptor
+ * @head: stack_t list
  * @line: Line to getline
  *
  * Description: To handle the file and getline
@@ -68,6 +69,7 @@ void _pop(stack_t **stack, unsigned int line_number);
 void _swap(stack_t **stack, unsigned int line_number);
 void _add(stack_t **stack, unsigned int line_number);
 void _nop(stack_t **stack, unsigned int line_number);
+void _sub(stack_t **head, unsigned int counter);
 
 void free_stack(stack_t **stack);
 void free_all();

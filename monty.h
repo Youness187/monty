@@ -44,6 +44,7 @@ typedef struct instruction_s
  * @file: File descriptor
  * @head: stack_t list
  * @line: Line to getline
+ * @lifo: last in first out
  *
  * Description: To handle the file and getline
  */
@@ -52,6 +53,7 @@ typedef struct glob_s
 	FILE *file;
 	stack_t *head;
 	char *line;
+	int lifo;
 } glob_vars;
 
 extern int value;
@@ -77,6 +79,8 @@ void _pchar(stack_t **head, unsigned int counter);
 void _pstr(stack_t **head, unsigned int counter);
 void _rotl(stack_t **head, unsigned int counter);
 void _rotr(stack_t **head, unsigned int counter);
+void _queue(stack_t **head, unsigned int counter);
+void _stack(stack_t **head, unsigned int counter);
 
 void free_stack(stack_t **stack);
 void free_all();

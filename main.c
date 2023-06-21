@@ -1,6 +1,6 @@
 #include "monty.h"
 
-glob_vars gv = {NULL, NULL, NULL};
+glob_vars gv = {NULL, NULL, NULL, 1};
 
 int main(int argc, char *argv[])
 {

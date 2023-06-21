@@ -20,6 +20,8 @@ int handle_cmd(char *line, unsigned int l, stack_t **head)
         {"pstr", _pstr},
         {"rotl", _rotl},
         {"rotr", _rotr},
+        {"stack", _stack},
+        {"queue", _queue},
 		{NULL, NULL}
 	};
 

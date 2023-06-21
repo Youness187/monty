@@ -13,6 +13,7 @@ int handle_cmd(char *line, unsigned int l, stack_t **head)
         {"add", _add},
         {"nop", _nop},
         {"sub", _sub},
+        {"div", _div},
 		{NULL, NULL}
 	};
 
